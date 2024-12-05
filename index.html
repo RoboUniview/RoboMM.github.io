@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RoboMM: All-in-One Multimodal Large Model for Robotic Manipulation">
+  <meta name="keywords" content="LMMs, Robot Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>RoboMM: All-in-One Multimodal Large Model for Robotic Manipulation</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathJax Example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- <style>
+    /* 调整所有 section 的上下间距 */
+    section {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+  
+  </style>
+   -->
+  
+
+  <!-- <style>
+    .gif-gallery {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .gif-item {
+      margin: 10px; /* Add some space around each GIF */
+    
+    }
+
+
+    .gif-item img {
+      max-width: 100%; /* Ensure the image is responsive     text-align: center; /* Center the GIF name below the image */ 
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style> -->
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            RoboMM: All-in-One Multimodal Large Model for Robotic Manipulation
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Authors Anonymous</a>
+            </span>
+            <!-- 如果有多个作者，可以在此继续添加 -->
+          </div>
+
+          <div class="publication-links">
+            <!-- <span class="link-block">
+              <a href="" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span> -->
+             
+            <span class="link-block">
+              <a href="https://github.com/RoboUniview/RoboMM" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="gif-gallery">
+          <div class="gif-item">
+            <img src="./static/gif/0-0-rotate_blue_block_right-succ.gif" alt="GIF 1">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-1-move_slider_right-succ.gif" alt="GIF 2">
+          
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-2-lift_red_block_slider-succ.gif" alt="GIF 3">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-3-place_in_slider-succ.gif" alt="GIF 4">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-4-turn_off_lightbulb-succ.gif" alt="GIF 5">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="gif-gallery">
+          <div class="gif-item">
+            <img src="./static/gif/0-0-rotate_blue_block_right.gif" alt="GIF 1">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-1-move_slider_right.gif" alt="GIF 2">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-2-lift_red_block_slider.gif" alt="GIF 3">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-3-place_in_slider.gif" alt="GIF 4">
+           
+          </div>
+          <div class="gif-item">
+            <img src="./static/gif/0-4-turn_off_lightbulb.gif" alt="GIF 5">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <figure class="image">
+          <img src="./static/images/robomm.png" alt="Large Image">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In recent years, robotics has advanced significantly
+            through the integration of larger models and large-scale
+            datasets. However, challenges remain in applying these
+            models to 3D spatial interactions and managing data collection costs. To address these issues, we propose the
+            multimodal robotic manipulation model, RoboMM, along
+            with the comprehensive dataset, RoboData. RoboMM enhances 3D perception through camera parameters and occupancy supervision. Building on OpenFlamingo, it incorporates Modality-Isolation-Mask and multimodal decoder
+            blocks, improving modality fusion and fine-grained perception. RoboData offers the complete evaluation system by integrating several well-known datasets, achieving the first fusion of multi-view images, camera parameters, depth maps,
+            and actions, and the space alignment facilitates comprehensive learning from diverse robotic datasets. Equipped
+            with RoboData and the unified physical space, RoboMM is
+            the first generalist policy that enables simultaneous evaluation across all tasks within multiple datasets, rather than
+            focusing on limited selection of data or tasks. Its design
+            significantly enhances robotic manipulation performance,
+            increasing the average sequence length on the CALVIN
+            from 1.7 to 3.3 and ensuring cross-embodiment capabilities,
+            achieving state-of-the-art results across multiple datasets.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">The RoboMM Architecture</h3>
+        <img style="width:1000px" src="./static/images/outline.png">
+
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          <p>The figure above show the architecture of RoboMM. Vision Encoder Block for extracting multi-view features, Adapter Block that leverages occupancy
+            supervision to unify features and enhance spatial perception, Feature Fusion Block based on LLMs for merging text and visual information
+            and Multimodal Decoder Blocks that enhance fine-grained perception and understanding through multimodal outputs.
+          </p>
+
+          &nbsp;</p>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+  </div>
+</section> 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">The RoboData Details</h3>
+        <img style="width:1000px" src="./static/images/outline.png">
+
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          <p>To solve the lack of proper spatial alignment across datasets,  we curate well-known datasets from the industry, including <a href="http://calvin.cs.uni-freiburg.de/" target="_blank">CALVIN</a>, <a href="https://meta-world.github.io/" target="_blank">MetaWorld</a>, <a href="https://libero-project.github.io/main.html" target="_blank">LIBERO</a>, <a href="https://robomimic.github.io/Robomimic" target="_blank">Robomimic</a>, <a href="https://robocasa.ai/" target="_blank">RoboCasa</a>, <a href="https://maniskill2.github.io/ManiSkill2" target="_blank">ManiSkill2</a>, <a href="https://arxiv.org/html/2407.06951v1" target="_blank">RoboCAS</a>, <a href="https://sites.google.com/view/rlbench" target="_blank">RLbench</a>,
+            and <a href="https://robot-colosseum.github.io/" target="_blank">Colosseum</a>, forming a comprehensive dataset we call RoboData. This dataset aims to provide the industry with a complete and fair evaluation system, comprising
+            70,000 episodes and 7 million samples. It encompasses a diverse range of tasks, including placing, picking, turning, and stackin. 
+          </p>
+
+          &nbsp;</p>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+  </div>
+</section> 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <h3 class="title is-5">Comparisons with Other State-of-the-Art Methods</h3>
+        <img style="width:900px" src="./static/images/results.png">
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          <p>The results summarized in the figure above reveal
+            that RoboMM exhibits exceptional performance across the
+            evaluated datasets, achieving state-of-the-art results in particular on the <a href="https://libero-project.github.io/main.html" target="_blank">LIBERO</a> and <a href="https://robocasa.ai/" target="_blank">RoboCasa</a> datasets.
+            Notably, in the <a href="http://calvin.cs.uni-freiburg.de/" target="_blank">CALVIN</a> dataset, RoboMM attain a success rate (SR) of 91.0%, which is competitive with the performance of <a href="https://intuitive-robots.github.io/mdt_policy/MDT" target="_blank">MDT</a> and <a href="https://arxiv.org/abs/2210.01911" target="_blank">HULC++</a>, significantly exceeding the performance of models in the second tier. In the
+            <a href="https://meta-world.github.io/" target="_blank">MetaWorld</a> dataset, RoboMM achieve a success rate of 78.6%, positioning it within the top tier of models. Furthermore, RoboMM consistently outperformed other models in <a href="https://arxiv.org/abs/2306.03310" target="_blank">LIBERO</a>, <a href="https://robocasa.ai/" target="_blank">RoboCasa</a>, and <a href="https://robomimic.github.io/Robomimic" target="_blank">Robomimic</a>,
+            demonstrating its robustness and adaptability across a variety of tasks and environments. These findings not only underscore RoboMM’s versatility but also highlight its effectiveness in handling tasks with varying levels of complexity, indicating its potential for real-world applications.
+          </p>
+
+          &nbsp;</p>
+        </div>
+        <h3 class="title is-5"> Ablation Experiments</h3>
+        <img style="width:900px" src="./static/images/ablation.png">
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          <p>The results of the ablation experiments are summarized in the table above, which demonstrates a clear trend of performance improvement as different modules are added. </p>
+          &nbsp;</p>
+        </div>
+
+        <!-- <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          <p>The entire RoboUniView framework is illustrated in Figure. During the forward process, multi-perspective images pass through Vision Encoder to extract wrist image features and the unified view representation. These are then combined with language tokens in the Feature Fusion Decoder to extract integrated vision-language features. Finally, these features pass through the policy head to execute robotic manipulation. The training process consists of two phases: during the pre-training phase, Vision Encoder undergoes training on a large dataset of easily accessible RGB-D images to learn robust unified view representation; during the fine-tuning phase, the model learns to predict robotic actions from the unified view representation, using paired images and action data.</p>
+
+          &nbsp;</p>
+        </div> -->
+
+      </div>
+    </div>
+    <hr>
+  </div>
+</section> 
+
+</body>
+</html>
